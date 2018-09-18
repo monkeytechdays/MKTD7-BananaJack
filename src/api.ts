@@ -1,10 +1,12 @@
-import {RoomEvent, Player, Room, Action} from './model'
+import { RoomEvent, Player, Room, Action } from './model';
 
-class BackendApi {
+
+export class BackendApi {
 
     constructor(readonly url: string,
-                readonly listener: (event: RoomEvent) => void) {}
-    
+                readonly listener: (event:RoomEvent) => void) {
+        console.debug('Use', url);
+    }
     private handle<T>(res: Response): Promise<T> {
         if (res.ok) {
             return res.json();

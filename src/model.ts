@@ -38,7 +38,6 @@ export type Action = 'draw' | 'stay';
 
 export type Move = 'wait' | 'in-game' | 'burst' | 'draw' | 'stay' | 'timeout' ;
 
-
 export interface RoomEvent {
     type: string;
     round?: number;
