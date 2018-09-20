@@ -6,10 +6,10 @@ Goals
 
 Use WebComponent to implement a BananaJack client.
 
-If you want, you can start on these git branchs:
+If you want, you can start on these git branches:
 
 * `start-native`: containing a skeleton for native WebComponent
-* `start-stencil`: containing a skeleton for Stencils
+* `start-stencil`: containing a skeleton for Stencil
 
 
 Rules
@@ -21,7 +21,7 @@ The rules are a very simplified version of BlackJack.
 When you enter the room
 
 - you had to wait the end of the active round
-- at the beginning of the round, two card are given to every active players, including the *bank*
+- at the beginning of the round, two cards are given to every active players, including the *bank*
 - the score is the sum of the value of your cards (King, Queen and Jack give 10, Ace can give 1 or 11).
   - if score is 21, you have a BananaJack 🎉
   - if score is greater than 21, you loose 😢
@@ -34,7 +34,6 @@ REST API
 ---
 
 ### Login
-
 
 `POST http://ilaborie.org:9898/api/auth/login`
 
@@ -58,7 +57,6 @@ Return a `Player`:
 
 ### Logout
 
-
 `POST http://ilaborie.org:9898/api/auth/logout`
 
 With body:
@@ -79,12 +77,9 @@ Return a `Player`:
 }
 ```
 
-
 ### Get Rooms
 
-
 `GET http://ilaborie.org:9898/api/room`
-
 
 Return an array of `Room`:
 
@@ -176,7 +171,6 @@ With body:
 
 Return the updated `Room`
 
-
 ### Do an action `draw`, `stay`
 
 `POST http://ilaborie.org:9898/api/room/move`
@@ -192,7 +186,6 @@ With body:
 ```
 
 Return the updated `Room`
-
 
 WebSocket API
 ---
@@ -246,7 +239,6 @@ A player is joining the room, see the `player` attribute.
 ### type `player-action`
 
 A player have made a move, see the `action` attribute.
-
 
 Suggestions
 ---
