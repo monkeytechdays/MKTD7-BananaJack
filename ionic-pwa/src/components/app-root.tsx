@@ -2,11 +2,10 @@ import { Component, Prop, Listen } from '@stencil/core';
 
 @Component({
   tag: 'app-root',
-  styleUrl: 'app-root.css'
 })
 export class AppRoot {
-  
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+
 
   /**
    * Handle service worker updates correctly.
@@ -33,8 +32,9 @@ export class AppRoot {
     return (
       <ion-app>
         <ion-router useHash={false}>
-          <ion-route url="/" component="app-home" />
-          <ion-route url="/profile/:name" component="app-profile" />
+          <ion-route url="/" component="app-login" />
+          <ion-route url="/rooms" component="app-rooms" />
+          <ion-route url="/rooms/:roomId" component="app-room" />
         </ion-router>
         <ion-nav />
       </ion-app>
