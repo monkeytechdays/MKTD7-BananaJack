@@ -1,10 +1,19 @@
 import { Component, Prop, Listen } from '@stencil/core';
+import { Store } from '@stencil/redux';
+import { bananaStore } from '../store';
 
 @Component({
   tag: 'app-root',
 })
 export class AppRoot {
   @Prop({ connect: 'ion-toast-controller' }) toastCtrl: HTMLIonToastControllerElement;
+
+  @Prop({context: 'store'}) store: Store;
+
+
+  componentWillLoad() {
+    this.store.setStore(bananaStore({}));
+  }
 
 
   /**
