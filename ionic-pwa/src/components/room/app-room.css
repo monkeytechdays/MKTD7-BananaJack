@@ -1,0 +1,69 @@
+.room-current {
+  border: thin solid rgba(255,255,255,.5);
+  margin: .5em;
+  min-width: 75vw;
+  padding: .25rem;
+}
+
+.room-current header {
+  align-items: center;
+  background: rgba(0,0,0,.25);
+  border-bottom: .125em solid rgba(0,0,0,.25);
+  box-shadow: 0 0 0 0.25em rgba(0,0,0,.25);
+  display: flex;
+  font-size: 1.2em;
+  justify-content: space-between;
+  text-shadow: 1px 1px 2px #000;
+}
+
+.room-current header .name {
+  font-family: Fascinate,cursive;
+  font-size: 1.5em;
+}
+
+.room-current header button {
+  animation: all .4s;
+  background: rgba(255,255,255,.85);
+  border: .125em solid rgba(0,0,0,.25);
+  border-radius: .125rem;
+  color: var(--green,green);
+  font-size: 1.2rem;
+  margin: .25em;
+  min-height: 1.8rem;
+  text-shadow: 0.0625em 0.0625em 0.25em rgba(0,0,0,.25);
+}
+
+.room-current .winner {
+  color: var(--yellow,#ff0);
+}
+
+.room-current .winner:before {
+  content: "Winner: ";
+}
+
+.room-current .winner:after {
+  content: "🎊";
+  margin: 0 .5em;
+}
+
+.room-current .players {
+  display: grid;
+  grid-gap: 1em;
+  grid-template-columns: repeat(auto-fill,minmax(24em,1fr));
+  margin: .5em 0;
+}
+
+.room-current .player.bank {
+  background: rgba(255,255,255,.25);
+  border-color: rgba(255,255,255,.25);
+}
+
+.room-current .player {
+  border: thin solid transparent;
+  display: grid;
+  grid-auto-flow: dense;
+  grid-template-columns: 2fr 1fr 1fr;
+  grid-template-rows: 2em 1fr 2.5em;
+  overflow: hidden;
+  padding: .25rem;
+}
