@@ -187,6 +187,23 @@ With body:
 
 Return the updated `Room`
 
+### Dashboard
+
+`GET http://ilaborie.org:9898/api/dashboards`
+
+Returns a list of player (with score)
+
+```json
+[
+    {
+        "id": "9472e17c947350be21d5e6990b6808de87053bec",
+        "name": "Toto",
+        "score": 0
+    },
+    // ...
+]
+```
+
 WebSocket API
 ---
 
