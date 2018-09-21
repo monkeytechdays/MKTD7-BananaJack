@@ -1,0 +1,5 @@
+cards-list {
+  align-items: center;
+  display: flex;
+  grid-column: 1/4;
+}

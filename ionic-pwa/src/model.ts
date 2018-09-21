@@ -49,3 +49,7 @@ export interface RoomEvent {
     winners?: string;
     action?: Move;
 }
+
+export function card(code: string): Card {
+  return { code, image: `assets/${code}.png` };
+}
